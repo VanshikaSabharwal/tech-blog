@@ -2,32 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100vh;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.heroImgSlider {
+  height: 35rem;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  html {
+    margin-right: -5rem;
   }
+}
+.text {
+  color: rgb(81 95 92);
+}
+.blogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.blogs h2 {
+  font-size: 2rem;
+  padding: 2rem 0;
+  text-align: center;
+  font-weight: bold;
+}
+.blogContent {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  padding: 12px 14px;
+  background-color: black;
+  color: white;
+  width: 350px;
+  height: max-content;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.496) 0px 10px 20px,
+    rgba(0, 0, 0, 0.188) 0px 6px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.5rem;
 }
